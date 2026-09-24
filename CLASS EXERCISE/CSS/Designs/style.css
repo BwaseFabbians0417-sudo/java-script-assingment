@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    min-height: 100vh;
+    background-color: teal;
+    /* background-image: url("../../../images/image copy 14.png"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 10px;
+    background-color: aqua;
+}
+.header .logo p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 50%;
+    background-image: repeating-linear-gradient(blue, red, purple);
+}
+.header .logo p span {
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+.navbar ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.navbar ul li {
+    padding: 10px;
+}
+.navbar ul li:hover {
+    border-radius: 5px;
+    background-color: white;
+}
+.navbar ul li a {
+    color: blue;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navbar ul li a:focus-visible,
+.header .btn:focus-visible,
+.hero-btn button:focus-visible,
+.card .btn a:focus-visible,
+form button:focus-visible,
+form input:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+.header .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: aqua;
+    background-color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.header .btn:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: aqua;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+.container .hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 500px;
+    padding: 40px;
+    /* border: 1px solid: black; */
+}
+.container .hero-section > div {
+    flex: 1;
+}
+.container .hero-section > .hero-image {
+    flex: 0 1 400px;
+    width: min(400px, 100%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: transform 2s;
+    overflow: hidden;
+}
+.hero-image:hover{
+    transform: rotate(360deg);
+}
+.container .hero-section .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .hero-section .hero-text h1 {
+    font-size: 2rem;
+    font-weight: 100;
+}
+.container .hero-section .hero-text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.container .hero-section .hero-btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.container .hero-section .hero-btn button {
+    width: 200px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container .hero-section .hero-btn button:first-child {
+    background-color:aqua;
+    color: white;
+}
+.container .hero-section .hero-btn button:first-child:hover{
+    background-color: purple;
+}
+.container .hero-section .hero-btn button:last-child:hover{
+background-color:aqua;
+color: pink;
+}
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.section-heading {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.product-heading {
+    color: aqua;
+    text-transform: uppercase;
+}
+
+.contact-heading {
+    color: aqua;
+    text-transform: uppercase;
+}
+
+.product-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+.product-section .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.product-section .card {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+}
+.product-section .card > img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.card .desc {
+    padding: 16px;
+}
+.card .data {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.card .title {
+    font-size: 1rem;
+}
+.card .btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.card .btn a {
+    padding: 10px 14px;
+    border-radius: 5px;
+    color: white;
+    background-color: aqua;
+    text-decoration: none;
+}
+form {
+    display: grid;
+    gap: 8px;
+    max-width: 700pxpx;
+    margin: 0 auto;
+    padding: 40px;
+}
+form label {
+    font-weight: 700;
+}
+form input:not([type="radio"]),
+form button {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    font: inherit;
+}
+form fieldset {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid teal;
+}
+form fieldset label {
+    font-weight: 400;
+}
+form button {
+    border: none;
+    color: teal;
+    background-color:white;
+    cursor: pointer;
+}
+form button:hover {
+    background-color:green;
+}
+
+.scroll-button {
+    position: fixed;
+    right: 24px;
+    bottom: -14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background-color: teal;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.scroll-button.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.scroll-button:hover {
+    background-color: #0b9d9d;
+}
+@media (max-width: 700px) {
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .navbar {
+        order: 3;
+        width: 100%;
+    }
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .container .hero-section {
+        flex-direction: column;
+        padding: 24px;
+    }
+    .container .hero-section .hero-btn {
+        flex-wrap: wrap;
+    }
+    .container .hero-section .hero-btn button {
+        width: min(200px, 100%);
+    }
+    .hero-image img {
+        height: 100%;
+    }
+    .product-section {
+        padding: 24px;
+    }
+    .form {
+        padding: 24px;
+    }
+}

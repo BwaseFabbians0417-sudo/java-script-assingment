@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ /*.wrapper{
+    background-color: blue;
+    height: 900px;
+ }*/
+ body{
+    /* background: linear-gradient(to left, red,purple); */
+    background-image: radial-gradient(circle,yellow,green,blue,red,gold,pink,black,white);
+    height:100vh;
+ } 

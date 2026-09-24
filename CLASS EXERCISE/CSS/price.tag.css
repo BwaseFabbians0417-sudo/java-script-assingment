@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #1c1c1c;
+    background-image: url(/MANHART.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ededed;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 2000px;
+    min-height: 80px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: teal;
+}
+.header .logo p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, purple, blue);
+    color: #ffffff;
+    font-size: 28px;
+}
+.header .logo p span {
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: blueviolet;
+    font-size: 18px;
+}
+.navbar ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.navbar ul li a {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navbar ul li:hover a {
+    border-radius: 5px;
+    background-color: rgb(4, 251, 251);
+}
+.header .btn {
+    border: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: teal;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+.header .btn:hover {
+    background-color: #0b7777;
+    color: #ffffff;
+}
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.hero-section {
+    padding: 20px 0 30px;
+}
+.hero-text {
+    max-width: 620px;
+}
+.hero-text h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.hero-text p {
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pricing-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 24px;
+    border: 1px solid #3e3e3e;
+    border-radius: 8px;
+    background-color:teal;
+}
+.popular-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: #3e3e3e;
+    color: #bcbcbc;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.plan-name {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.plan-description {
+    min-height: 40px;
+    margin-bottom: 20px;
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+.btn {
+    display: block;
+    margin-bottom: 24px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+.btn-primary {
+    background-color: #3ecf8e;
+    color: #1c1c1c;
+}
+.btn-secondary {
+    border: 1px solid #3e3e3e;
+    background-color: #242424;
+    color: #ededed;
+}
+.price-container {
+    margin-bottom: 16px;
+}
+.price-prefix {
+    display: block;
+    height: 16px;
+    color: #888888;
+    font-size: 0.85rem;
+}
+.price-amount {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.price-suffix {
+    color: #888888;
+    font-size: 0.9rem;
+}
+.price-subtext {
+    margin-bottom: 16px;
+    color: #aaaaaa;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+.price-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #3ecf8e;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+.price-link:hover {
+    text-decoration: underline;
+}
+.features-title {
+    margin-bottom: 16px;
+    color: #bcbcbc;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.features-list {
+    list-style: none;
+}
+.feature-item {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 22px;
+    color: #dedede;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+.feature-item::before {
+    position: absolute;
+    left: 0;
+    color: #3ecf8e;
+    content: "✓";
+    font-weight: bold;
+}
+.feature-detail {
+    display: block;
+    margin-top: 2px;
+    color: #888888;
+    font-size: 0.75rem;
+}
+.custom-enterprise-margin {
+    margin-top: 14px;
+    margin-bottom: 44px;
+}
+.enterprise-text-size {
+    font-size: 2.2rem;
+}
+@media (max-width: 640px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .navbar {
+        order: 3;
+        width: 100%;
+    }
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

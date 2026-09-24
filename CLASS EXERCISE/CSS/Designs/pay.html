@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPay Payment Link Component</title>
+    <style>
+        :root {
+            --opay-green: #00B87B;
+            --opay-dark: #111111;
+            --opay-light-green: #E6F8F2;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F8F9FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .payment-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 24px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            border: 1px solid #EEEEEE;
+        }
+        .opay-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .opay-logo-mark {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background-color: var(--opay-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .opay-logo-mark::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        .opay-logo-mark::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            top: 13px;
+            right: 13px;
+        }
+
+        .opay-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--opay-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .merchant-name {
+            font-size: 14px;
+            color: #666666;
+            margin: 0 0 8px 0;
+        }
+        
+        .opay-payment-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--opay-green);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 12px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(0, 184, 123, 0.2);
+        }
+
+        .opay-payment-btn:hover {
+            background-color: #009E69;
+        }
+
+        .opay-payment-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Secure Badge */
+        .secure-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .lock-icon {
+            width: 12px;
+            height: 12px;
+            border: 2px solid #999999;
+            border-radius: 3px 3px 0 0;
+            position: relative;
+            margin-top: -4px;
+        }
+        
+        .lock-icon::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 6px;
+            background: #999999;
+            top: 2px;
+            left: 0;
+        }
+
+</style>
+</head>
+<body>
+
+    <div class="payment-card">
+        <div class="opay-logo-container">
+            <div class="opay-logo-mark"></div>
+            <div class="opay-text">OPay</div>
+        </div>
+
+        <!-- Payment Details -->
+        <p class="merchant-name">Paying Digital Store Ltd</p>
+
+        <a href="#" class="opay-payment-btn">
+        payment successful
+        </a>
+
+        <div class="secure-footer">
+            <div class="lock-icon"></div>
+            <span>Secured by OPay Merchant Service</span>
+        </div>
+    </div>
+
+</body>
+</html>
